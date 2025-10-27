@@ -123,10 +123,9 @@ Total do Sistema:
 
 ### Distribuição de Notas
 
-- **Fase 1** (20%): Documentação da da Arquitetura (13/10 entrega por email)
-        - Desenho da arquitura, definição da linguagem, banco de dados, link do repo
-- **Fase 2** (30%): Demonstração Funcional (24/11)
-- **Fase 3** (50%): Entrega Final + Performance (01/12 projeto completo no github)
+- **Fase 1** (20%): Documentação da Arquitetura (27/10 entrega por email)
+        - Desenho da arquitura, definição da linguagem, banco de dados, definição dos json do endpoints,link do repo
+- **Fase 2** (80%): Entrega Final + Performance (01/12 projeto completo no github)
 
 
 
