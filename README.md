@@ -86,7 +86,7 @@ GET    /api/v1/health          - Health check da aplicação
 
 - **Fase 1** (20%): Documentação da Arquitetura (27/10 entrega por email)
         - Desenho da arquitura, definição da linguagem, banco de dados, definição dos json do endpoints,link do repo
-- **Fase 2** (80%): Entrega Final + Performance (01/12 projeto completo no github)
+- **Fase 2** (80%): Entrega Final + Performance (24/11 projeto completo no github)
 
 
 
