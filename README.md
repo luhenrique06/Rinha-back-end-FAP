@@ -10,7 +10,7 @@ Desenvolver uma API REST para um sistema de busca de médicos por especialidade 
 
 ### Stack Tecnológica
 
-- **Linguagem**: **C**
+- **Linguagem**: **Nest**
 - **Banco de Dados**: **PostgreSQL**
 
 ## Endpoints Obrigatórios
