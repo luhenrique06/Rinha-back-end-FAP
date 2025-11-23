@@ -7,20 +7,20 @@
 | 410124 | Guilherme Gorte Alves | [@guilhermegorte2-beep](https://github.com/guilhermegorte2-beep) |
 | 409915 | Guilherme Lamera Valente | [@Gui-Valente](https://github.com/Gui-Valente) |
 
-3. DESCRIÇÃO DO PROJETO:
+2. DESCRIÇÃO DO PROJETO:
 
    - O projeto consiste em uma API REST desenvolvida com NestJS e TypeORM para gerenciar médicos, especialidades, cidades e autenticação de usuários.
 Seu objetivo é permitir que usuários encontrem médicos filtrando por especialidade e localização, além de possibilitar o cadastro e consulta dessas entidades. As principais
 funcionalidades incluem CRUD completo para médicos, cidades e especialidades, autenticação via rota auth, e relacionamentos entre as entidades para consultas mais eficientes.
 
-5. TECNOLOGIAS UTILIZADAS:
+3. TECNOLOGIAS UTILIZADAS:
 
    - **Linguagem**: [TypeScript/Node.js/TypeORM]
    - **Framework**: [NestJS]
    - **Banco de Dados**: PostgreSQL
    - **Documentação API**: Postman
 
-7. ARQUITETURA DO SISTEMA:
+4. ARQUITETURA DO SISTEMA:
 
    -
    
@@ -34,7 +34,7 @@ produtividade e integração com outras ferramentas.
 com o schema do PostgreSQL.
 8. **Por que [PostgreSQL]**: Banco de dados relacional robusto, seguro e muito utilizado em aplicações sérias. Possui ótimo suporte a relacionamentos.
 
-### 4. ARQUITETURA DO SISTEMA
+### 5. ARQUITETURA DO SISTEMA
 
 ![Arquitetura do Sistema](docs/arquitetura.png)
 
