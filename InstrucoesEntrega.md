@@ -1,84 +1,42 @@
-# INSTRUÇÕES DE ENTREGA - Projeto "Cadê meu Médico?"
+* CADÊ MEU MÉDICO?
 
-## 🎯 Formato de Entrega
+1. IDENTIFICAÇÃO DO GRUPO:
 
-### Repositório Git
-- **Plataforma**: GitHub
-- **Visibilidade**: Público 
-- **Commits**: Mínimo 4 commits significativos por integrante
+   - Guilherme Gorte e Guilherme Valente;
+   
+| 410124 | Guilherme Gorte Alves | [@guilhermegorte2-beep](https://github.com/guilhermegorte2-beep) |
+| 409915 | Guilherme Lamera Valente | [@Gui-Valente](https://github.com/Gui-Valente) |
 
-## 📁 Estrutura Obrigatória do Repositório
+2. DESCRIÇÃO DO PROJETO:
 
-```
-cade-meu-medico-[nome-grupo]/
-├── README.md                    # Documentação principal (OBRIGATÓRIO)
-├── docker-compose.yml           # Orquestração dos containers (OBRIGATÓRIO)
-├── Dockerfile                   # Build da aplicação (OBRIGATÓRIO)
-├── .env.example                 # Exemplo de variáveis de ambiente (OBRIGATÓRIO)
-├── postman_collection.json      # Collection do Postman exportado (OBRIGATÓRIO)
-├── /src                         # Código fonte da aplicação
+   - O projeto consiste em uma API REST desenvolvida com NestJS e TypeORM para gerenciar médicos, especialidades, cidades e autenticação de usuários.
+Seu objetivo é permitir que usuários encontrem médicos filtrando por especialidade e localização, além de possibilitar o cadastro e consulta dessas entidades. As principais
+funcionalidades incluem CRUD completo para médicos, cidades e especialidades, autenticação via rota auth, e relacionamentos entre as entidades para consultas mais eficientes.
 
-```
+3. TECNOLOGIAS UTILIZADAS:
 
-## 📝 README.md - Estrutura Obrigatória
+   - **Linguagem**: [TypeScript/Node.js/TypeORM]
+   - **Framework**: [NestJS]
+   - **Banco de Dados**: PostgreSQL
+   - **Documentação API**: Postman
 
-O README.md do seu projeto DEVE conter TODAS as seções abaixo:
+4. ARQUITETURA DO SISTEMA:
 
-### 1. IDENTIFICAÇÃO DO GRUPO (Obrigatório)
+   -
+   
+     ### Decisões Técnicas
+1. **Por que [NestJS]**: É um framework que organiza o projeto em módulos, serviços, controllers e repositórios, criando uma arquitetura limpa e profissional. Facilita
+manutenção, testes e escalabilidade.
+3. **Por que [Node.js]**: Foi escolhido por ser rápido, escalável e muito utilizado em APIs modernas. Permite trabalhar com JavaScript/TypeScript no backend, facilitando
+produtividade e integração com outras ferramentas.
+5. **Por que [TypeScript]**: Adiciona tipagem estática ao JavaScript, evitando erros comuns em tempo de execução. Melhora legibilidade, autocompletes e segurança do código.
+6. **Por que [TypeORM]**: Permite trabalhar com banco de dados usando classes e entidades ao invés de SQL bruto. Facilita criação de relacionamentos, migrações e sincronizaçã
+com o schema do PostgreSQL.
+8. **Por que [PostgreSQL]**: Banco de dados relacional robusto, seguro e muito utilizado em aplicações sérias. Possui ótimo suporte a relacionamentos.
 
-```markdown
-# Cadê meu Médico? - [Nome do Grupo]
+### 5. ARQUITETURA DO SISTEMA
 
-## 👥 Integrantes do Grupo
-
-| RA | Nome Completo | GitHub |
-|----|--------------|--------|
-| 12345678 | João Silva Santos | [@joaosilva](https://github.com/joaosilva) |
-| 87654321 | Maria Oliveira | [@mariaoliveira](https://github.com/mariaoliveira) |
-| 11223344 | Pedro Costa | [@pedrocosta](https://github.com/pedrocosta) |
-| 44332211 | Ana Paula Souza | [@anasouza](https://github.com/anasouza) |
-```
-
-### 2. DESCRIÇÃO DO PROJETO (Obrigatório)
-
-```markdown
-## 📋 Descrição
-
-[Descrever em 3-5 linhas o que é o projeto, seu objetivo e principais funcionalidades]
-
-## 🎯 Objetivos Alcançados
-
-- ✅ API REST completa com [X] endpoints
-- ✅ Autenticação JWT implementada
-- ✅ Sistema de busca por especialidade e cidade
-- ✅ [Outras funcionalidades implementadas]
-```
-
-### 3. TECNOLOGIAS UTILIZADAS (Obrigatório)
-
-```markdown
-## 🚀 Tecnologias Utilizadas
-
-- **Linguagem**: [Python/Node.js/Java/etc] versão X.X
-- **Framework**: [Django/Express/Spring/etc] versão X.X
-- **Banco de Dados**: PostgreSQL 15
-- **Documentação API**: Postman
-
-```
-
-### 4. ARQUITETURA DO SISTEMA (Obrigatório)
-
-```markdown
-## 🏗️ Arquitetura
-
-### Diagrama de Arquitetura
 ![Arquitetura do Sistema](docs/arquitetura.png)
-
-
-### Decisões Técnicas
-1. **Por que [tecnologia X]**: Justificativa...
-2. **Por que [abordagem Y]**: Justificativa...
-```
 
 ### Passo a Passo
 
@@ -116,6 +74,16 @@ curl http://localhost:3000/api/v1/health
 \```bash
 docker-compose down
 \```
+
+## 📁 Estrutura Obrigatória do Repositório
+
+cade-meu-medico-[nome-grupo]/
+├── README.md                    # Documentação principal (OBRIGATÓRIO)
+├── docker-compose.yml           # Orquestração dos containers (OBRIGATÓRIO)
+├── Dockerfile                   # Build da aplicação (OBRIGATÓRIO)
+├── .env.example                 # Exemplo de variáveis de ambiente (OBRIGATÓRIO)
+├── postman_collection.json      # Collection do Postman exportado (OBRIGATÓRIO)
+├── /src                         # Código fonte da aplicação
 
 
 
