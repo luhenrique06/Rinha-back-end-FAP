@@ -1,15 +1,35 @@
-# INSTRUÇÕES DE ENTREGA - Projeto "Cadê meu Médico?"
+* CADÊ MEU MÉDICO?
 
-## 🎯 Formato de Entrega
+1. IDENTIFICAÇÃO DO GRUPO:
+   - Guilherme Gorte e Guilherme Valente;
+    | 410124 | Guilherme Gorte Alves | [@guilhermegorte2-beep](https://github.com/guilhermegorte2-beep) |
+    | 409915 | Guilherme Lamera Valente | [@Gui-Valente](https://github.com/Gui-Valente) |
 
-### Repositório Git
-- **Plataforma**: GitHub
-- **Visibilidade**: Público 
-- **Commits**: Mínimo 4 commits significativos por integrante
+2. DESCRIÇÃO DO PROJETO:
+   - O projeto consiste em uma API REST desenvolvida com NestJS e TypeORM para gerenciar médicos, especialidades, cidades e autenticação de usuários.
+Seu objetivo é permitir que usuários encontrem médicos filtrando por especialidade e localização, além de possibilitar o cadastro e consulta dessas entidades. As principais
+funcionalidades incluem CRUD completo para médicos, cidades e especialidades, autenticação via rota auth, e relacionamentos entre as entidades para consultas mais eficientes.
+
+3. TECNOLOGIAS UTILIZADAS:
+   - **Linguagem**: [TypeScript/Node.js/TypeORM]
+   - **Framework**: [NestJS]
+   - **Banco de Dados**: PostgreSQL
+   - **Documentação API**: Postman
+
+4. ARQUITETURA DO SISTEMA:
+   -
+     ### Decisões Técnicas
+1. **Por que [NestJS]**: É um framework que organiza o projeto em módulos, serviços, controllers e repositórios, criando uma arquitetura limpa e profissional. Facilita
+manutenção, testes e escalabilidade.
+3. **Por que [Node.js]**: Foi escolhido por ser rápido, escalável e muito utilizado em APIs modernas. Permite trabalhar com JavaScript/TypeScript no backend, facilitando
+produtividade e integração com outras ferramentas.
+5. **Por que [TypeScript]**: Adiciona tipagem estática ao JavaScript, evitando erros comuns em tempo de execução. Melhora legibilidade, autocompletes e segurança do código.
+6. **Por que [TypeORM]**: Permite trabalhar com banco de dados usando classes e entidades ao invés de SQL bruto. Facilita criação de relacionamentos, migrações e sincronizaçã
+com o schema do PostgreSQL.
+8. **Por que [PostgreSQL]**: Banco de dados relacional robusto, seguro e muito utilizado em aplicações sérias. Possui ótimo suporte a relacionamentos.
 
 ## 📁 Estrutura Obrigatória do Repositório
 
-```
 cade-meu-medico-[nome-grupo]/
 ├── README.md                    # Documentação principal (OBRIGATÓRIO)
 ├── docker-compose.yml           # Orquestração dos containers (OBRIGATÓRIO)
@@ -18,46 +38,16 @@ cade-meu-medico-[nome-grupo]/
 ├── postman_collection.json      # Collection do Postman exportado (OBRIGATÓRIO)
 ├── /src                         # Código fonte da aplicação
 
-### 1. IDENTIFICAÇÃO DO GRUPO 
-
-# Cadê meu Médico? - [Guilherme Gorte e Guilherme Valente]
-
-## 👥 Integrantes do Grupo
-
-| RA | Nome Completo | GitHub |
-|----|--------------|--------|
-| 410124 | Guilherme Gorte Alves | [@guilhermegorte2-beep](https://github.com/guilhermegorte2-beep) |
-|  | Guilherme Lameira Valente | [@mariaoliveira](https://github.com/mariaoliveira) |
-
-### 2. DESCRIÇÃO DO PROJETO
-O projeto consiste em uma API REST desenvolvida com NestJS e TypeORM para gerenciar médicos, especialidades, cidades e autenticação de usuários. Seu objetivo é permitir que usuários encontrem médicos filtrando por especialidade e localização, além de possibilitar o cadastro e consulta dessas entidades. As principais funcionalidades incluem CRUD completo para médicos, cidades e especialidades, autenticação via rota auth, e relacionamentos entre as entidades para consultas mais eficientes.
-
 ## 🎯 Objetivos Alcançados
 
 - ✅ API REST completa com [X] endpoints
 - ✅ Autenticação JWT implementada
 - ✅ Sistema de busca por especialidade e cidade
 - ✅ [Outras funcionalidades implementadas]
-```
-
-### 3. TECNOLOGIAS UTILIZADAS
-
-- **Linguagem**: [TypeScript/Node.js/TypeORM]
-- **Framework**: [NestJS]
-- **Banco de Dados**: PostgreSQL
-- **Documentação API**: Postman
 
 ### 4. ARQUITETURA DO SISTEMA
 
 ![Arquitetura do Sistema](docs/arquitetura.png)
-
-
-### Decisões Técnicas
-1. **Por que [NestJS]**: É um framework que organiza o projeto em módulos, serviços, controllers e repositórios, criando uma arquitetura limpa e profissional. Facilita manutenção, testes e escalabilidade.
-2. **Por que [Node.js]**: Foi escolhido por ser rápido, escalável e muito utilizado em APIs modernas. Permite trabalhar com JavaScript/TypeScript no backend, facilitando a produtividade e integração com outras ferramentas.
-3. **Por que [TypeScript]**: Adiciona tipagem estática ao JavaScript, evitando erros comuns em tempo de execução. Melhora legibilidade, autocompletes e segurança do código.
-4. **Por que [TypeORM]**: Permite trabalhar com banco de dados usando classes e entidades ao invés de SQL bruto. Facilita criação de relacionamentos, migrações e sincronização com o schema do PostgreSQL.
-5. **Por que [PostgreSQL]**: Banco de dados relacional robusto, seguro e muito utilizado em aplicações sérias. Possui ótimo suporte a relacionamentos.
 
 ### Passo a Passo
 
