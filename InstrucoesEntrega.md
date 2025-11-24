@@ -22,7 +22,7 @@ funcionalidades incluem CRUD completo para médicos, cidades e especialidades, a
 
 4. ARQUITETURA DO SISTEMA:
 
-   -![Arquitetura do Sistema](docs/arquitetura.png)
+   -[![Arquitetura do Sistema](docs/arquitetura.png)](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22P%C3%A1gina-1%22%20id%3D%22qkqXeXuYoAPpkJWtlQlh%22%3E5Vldk5owFP01PrpjCPjxSIGqU607ZWe2%2B%2BSkkgo7YJgQV%2Bmvb5AgZq1bVGgc%2BwT35AM49%2BTm5tKCVrQdUhT7U%2BLhsKV1vG0L2i1NA10N8kuGpDkCB3oOLGngiU4l4Aa%2FsAA7Al0HHk6kjoyQkAWxDC7IaoUXTMIQpWQjd%2FtJQvmpMVriI8BdoPAYfQ485udoX%2BuV%2BAgHS794MugO8pYIFZ3FlyQ%2B8sjmAIJOC1qUEJbfRVsLhxl5BS%2F5uM8nWvcvRvGKVRnw6iTz8VTXH6Mvo0V%2FBPX2xmoD8R3YO6KhnFdACVnTBf5gMk30Y2nBXjatK0xCmU%2BWZIVCp0Q%2FUbJeeTh7xQ63yj4TQmIOAg6%2BYsZSoQy0ZoRDPotC0crfkqbfxfid8ZIZD0Zh2tvDRjsVltASokvMPiKou3cV1zgmEeaT8IEUh4gFbzJpSIhtue9X%2BoPfCJec4R7NuB%2F3lB55kRxylXs0Xal7TjujJFmmcOMHDLsx2nlqw2OmTFc%2B%2Bg2FazF6MhuOvwoUU4a3B485%2Fmz%2FIBT1RdzZlGELFLFIzNIu7FQOuvUT1a1Rx7oKHVfU40ClHPXm5WiNbdN23IsE2a0gSADfKRI2JUmg1yhJ44YlCTSVmgR17mA3TTNUSbNRaen7JPqxTi7Zhcbukzl0pvOpY4%2Bt2WXr%2F08bUk9e%2FxDIy19vbEOqM%2B8d3LAs1eZH%2Ff%2BEZbWnhEGzi98ybdN9%2BjabZ2vfnDW19kFx2Cm2fq2xrb9S3s4nCuIEX0CY4z461ticXJErVUjejcaydQCb5eeaJPIcYlJ5SP081RneQFdFfGu4emIo3X06d%2BSeRqonSk%2BrBaNNHlevSVcrHFeBIUeaxg6rRRX9LuqAuiZpud156IDeXwS9sx4xDTifmJ6ncrUp8KBOzykpfZ0KQqCeIKS0PKH9g5pZDelgldLZu1ruJcGIm%2BX%2FqF3bwV896PwG%3C%2Fdiagram%3E%3C%2Fmxfile%3E)
    
      ### Decisões Técnicas
 1. **Por que [NestJS]**: É um framework que organiza o projeto em módulos, serviços, controllers e repositórios, criando uma arquitetura limpa e profissional. Facilita
