@@ -29,6 +29,10 @@ import { EspecialidadeRepository } from './Repositories/especialidade.repository
 import { CidadeRepository } from './Repositories/cidade.repository';
 import { MedicoEspecialidadeRepository } from './Repositories/medico-especialidade.repository';
 import { MedicoCidadeRepository } from './Repositories/medico-cidade.repository';
+import { AuthController } from './Controllers/auth.controller';
+import { AuthService } from './Services/auth.service';
+import { AuthRepository } from './Repositories/auth.repository';
+import { JwtService } from '@nestjs/jwt';
 
 @Module({
   imports: [
@@ -41,12 +45,11 @@ import { MedicoCidadeRepository } from './Repositories/medico-cidade.repository'
       password: '150100',
       database: 'meu_banco',
       autoLoadEntities: true,
-      synchronize: true,
+      synchronize: false,
       migrations: ['dist/migrations/*.js'],
       migrationsRun: true,
     }),
 
-    // Registro das entidades no TypeORM
     TypeOrmModule.forFeature([
       User,
       Medico,
@@ -62,25 +65,24 @@ import { MedicoCidadeRepository } from './Repositories/medico-cidade.repository'
     CidadeController,
     MedicoEspecialidadeController,
     MedicoCidadeController,
+    AuthController
   ],
 
   providers: [
     AppService,
-
     MedicoService,
     MedicoRepository,
-
     EspecialidadeService,
     EspecialidadeRepository,
-
     CidadeService,
     CidadeRepository,
-
     MedicoEspecialidadeService,
     MedicoEspecialidadeRepository,
-
     MedicoCidadeService,
     MedicoCidadeRepository,
+    AuthService,
+    AuthRepository,
+    JwtService
   ],
 })
 export class AppModule {}
