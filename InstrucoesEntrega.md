@@ -22,7 +22,7 @@ funcionalidades incluem CRUD completo para médicos, cidades e especialidades, a
 
 4. ARQUITETURA DO SISTEMA:
 
-   -
+   -![Arquitetura do Sistema](docs/arquitetura.png)
    
      ### Decisões Técnicas
 1. **Por que [NestJS]**: É um framework que organiza o projeto em módulos, serviços, controllers e repositórios, criando uma arquitetura limpa e profissional. Facilita
@@ -34,9 +34,12 @@ produtividade e integração com outras ferramentas.
 com o schema do PostgreSQL.
 8. **Por que [PostgreSQL]**: Banco de dados relacional robusto, seguro e muito utilizado em aplicações sérias. Possui ótimo suporte a relacionamentos.
 
-### 5. ARQUITETURA DO SISTEMA
+### 5. DIVISÃO DE TAREFAS
 
-![Arquitetura do Sistema](docs/arquitetura.png)
+| Integrante | Responsabilidades | % Commits |
+|------------|-------------------|-----------|
+| Guilherme Gorte | API, Documentação, Rotas, Autenticação | 60%|
+| Guilherme Valente | Banco de Dados, Queries, Seeds, Testes | 40% |
 
 ### Passo a Passo
 
@@ -50,85 +53,39 @@ cd cade-meu-medico-[grupo]
 \```bash
 cp .env.example .env
 # Edite o arquivo .env com suas configurações
-\```
 
-3. Execute com Docker Compose:
-\```bash
-docker-compose up -d
-\```
-
-4. Aguarde a inicialização (aproximadamente 30 segundos)
-
-5. Acesse a API:
-\```
-http://localhost:3000/api/v1
-\```
-
-### Verificar se está funcionando
-\```bash
-curl http://localhost:3000/api/v1/health
-# Deve retornar: {"status": "ok"}
-\```
-
-### Parar a aplicação
-\```bash
-docker-compose down
-\```
 
 ## 📁 Estrutura Obrigatória do Repositório
 
 cade-meu-medico-[nome-grupo]/
 ├── README.md                    # Documentação principal (OBRIGATÓRIO)
-├── docker-compose.yml           # Orquestração dos containers (OBRIGATÓRIO)
-├── Dockerfile                   # Build da aplicação (OBRIGATÓRIO)
 ├── .env.example                 # Exemplo de variáveis de ambiente (OBRIGATÓRIO)
 ├── postman_collection.json      # Collection do Postman exportado (OBRIGATÓRIO)
 ├── /src                         # Código fonte da aplicação
-
-
-
-### 9. DIVISÃO DE TAREFAS (Obrigatório)
-
-```markdown
-## 👨‍💻 Divisão de Trabalho
-
-| Integrante | Responsabilidades | % Commits |
-|------------|-------------------|-----------|
-| João Silva | Backend (Autenticação, JWT), Docker | 28% |
-| Maria Oliveira | Banco de Dados, Queries, Seeds | 25% |
-| Pedro Costa | Testes de Carga, Performance | 22% |
-| Ana Paula | API de Busca, Documentação | 25% |
-
-
 
 ## ✅ Checklist de Entrega
 
 Antes de entregar, verifique:
 
 ### Repositório Git
-- [ ] README.md completo com TODAS as seções
-- [ ] Commits de todos os integrantes (mínimo 4 cada)
-- [ ] Código organizado em pastas
+- [✅] README.md completo com TODAS as seções
+- [✅] Commits de todos os integrantes (mínimo 4 cada)
+- [✅] Código organizado em pastas
 
 
 ### Docker
 - [ ] docker-compose.yml funcional
-- [ ] Aplicação inicia sem erros
+- [✅] Aplicação inicia sem erros
 
 ### Documentação
-- [ ] Diagrama de arquitetura (PNG/JPG)
+- [✅] Diagrama de arquitetura (PNG/JPG)
 - [ ] Collection do Postman exportada
 
 
 ### Funcionalidades
-- [ ] Todos endpoints obrigatórios funcionando
+- [✅] Todos endpoints obrigatórios funcionando
 - [ ] Autenticação JWT implementada
-- [ ] Busca por especialidade e cidade
+- [✅] Busca por especialidade e cidade
 - [ ] Paginação funcionando
-- [ ] Tratamento de erros adequado
+- [✅] Tratamento de erros adequado
 
-
-
----
-
-**Boa sorte! Qualquer dúvida, so me procurar.**
