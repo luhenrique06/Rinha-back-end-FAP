@@ -8,9 +8,9 @@ export class User {
   @Column({ length: 15, unique: true })
   username: string;
 
-  @Column({ length: 15 })
+  @Column({ length: 200 })
   password: string;
 
   @Column({ length: 50, nullable: true })
-  token: string | null;
+  token?: string | null;
 }

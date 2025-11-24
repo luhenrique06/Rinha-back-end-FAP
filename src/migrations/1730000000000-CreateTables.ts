@@ -3,10 +3,10 @@ import { MigrationInterface, QueryRunner } from "typeorm";
 export class CreateTables1730000000000 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(`
-      CREATE TABLE usuario (
+      CREATE TABLE "user" (
         id SERIAL PRIMARY KEY,
         username VARCHAR(15) NOT NULL UNIQUE,
-        password VARCHAR(15) NOT NULL,
+        password VARCHAR(100) NOT NULL,
         token VARCHAR(50)
       );
     `);

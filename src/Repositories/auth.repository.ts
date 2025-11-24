@@ -1,30 +1,29 @@
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
 import * as bcrypt from 'bcrypt';
-
-interface User {
-  id: number;
-  username: string;
-  passwordHash: string;
-}
+import { User } from 'src/entities/user.entity';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class AuthRepository {
-  private users: User[] = [];
-  private idCounter = 1;
+  constructor(
+    @InjectRepository(User)
+    private readonly repo: Repository<User>,
+  ) {}
 
-  async findByUsername(username: string): Promise<User | undefined> {
-    return this.users.find((user) => user.username === username);
+  async findByUsername(username: string): Promise<User | null> {
+    return this.repo.findOne({ where: { username } });
   }
 
   async createUser(username: string, password: string): Promise<User> {
     const passwordHash = await bcrypt.hash(password, 10);
-    const newUser: User = {
-      id: this.idCounter++,
+
+    const newUser = this.repo.create({
       username,
-      passwordHash,
-    };
-    this.users.push(newUser);
-    return newUser;
+      password: passwordHash,
+    });
+
+    return this.repo.save(newUser);
   }
 
   async validateCredentials(
@@ -34,7 +33,7 @@ export class AuthRepository {
     const user = await this.findByUsername(username);
     if (!user) return null;
 
-    const isValid = await bcrypt.compare(password, user.passwordHash);
+    const isValid = await bcrypt.compare(password, user.password);
     return isValid ? user : null;
   }
 }

@@ -13,26 +13,23 @@ import { Cidade } from './entities/cidade.entity';
 import { MedicoController } from './Controllers/medico.controller';
 import { EspecialidadeController } from './Controllers/especialidade.controller';
 import { CidadeController } from './Controllers/cidade.controller';
-import { MedicoEspecialidadeController } from './Controllers/medico-especialidade.controller';
-import { MedicoCidadeController } from './Controllers/medico-cidade.controller';
 
 // SERVICES
 import { MedicoService } from './Services/medico.service';
 import { EspecialidadeService } from './Services/especialidade.service';
 import { CidadeService } from './Services/cidade.service';
-import { MedicoEspecialidadeService } from './Services/medico-especialidade.service';
-import { MedicoCidadeService } from './Services/medico-cidade.service';
 
 // REPOSITORIES
 import { MedicoRepository } from './Repositories/medico.repository';
 import { EspecialidadeRepository } from './Repositories/especialidade.repository';
 import { CidadeRepository } from './Repositories/cidade.repository';
-import { MedicoEspecialidadeRepository } from './Repositories/medico-especialidade.repository';
-import { MedicoCidadeRepository } from './Repositories/medico-cidade.repository';
 import { AuthController } from './Controllers/auth.controller';
 import { AuthService } from './Services/auth.service';
 import { AuthRepository } from './Repositories/auth.repository';
 import { JwtService } from '@nestjs/jwt';
+import { HealthController } from './Controllers/health.controller';
+import { HealthService } from './Services/health.service';
+import { HealthRepository } from './Repositories/health.repository';
 
 @Module({
   imports: [
@@ -63,9 +60,8 @@ import { JwtService } from '@nestjs/jwt';
     MedicoController,
     EspecialidadeController,
     CidadeController,
-    MedicoEspecialidadeController,
-    MedicoCidadeController,
-    AuthController
+    AuthController,
+    HealthController
   ],
 
   providers: [
@@ -76,13 +72,11 @@ import { JwtService } from '@nestjs/jwt';
     EspecialidadeRepository,
     CidadeService,
     CidadeRepository,
-    MedicoEspecialidadeService,
-    MedicoEspecialidadeRepository,
-    MedicoCidadeService,
-    MedicoCidadeRepository,
     AuthService,
     AuthRepository,
-    JwtService
+    JwtService,
+    HealthService,
+    HealthRepository
   ],
 })
 export class AppModule {}

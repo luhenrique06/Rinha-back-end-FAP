@@ -1,26 +1,68 @@
 import { Injectable } from '@nestjs/common';
-import { DataSource } from 'typeorm';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { Medico } from '../entities/medico.entity';
 
 @Injectable()
 export class MedicoRepository {
-  constructor(private dataSource: DataSource) {}
+  constructor(
+    @InjectRepository(Medico)
+    private readonly repo: Repository<Medico>,
+  ) {}
 
-  async findAll() {
-    return this.dataSource.query(`SELECT * FROM medico`);
+  async findAll(pagination: { page: number; limit: number }) {
+    const { page, limit } = pagination;
+    const [data, total] = await this.repo.findAndCount({
+      skip: (page - 1) * limit,
+      take: limit,
+    });
+    return {
+      data,
+      total,
+      page,
+      lastPage: Math.ceil(total / limit),
+    };
   }
 
   async findById(id: number) {
-    const result = await this.dataSource.query(
-      `SELECT * FROM medico WHERE id = $1`,
-      [id],
-    );
-    return result[0];
+    return this.repo.findOne({ where: { id } });
   }
 
-  async create(nome: string, crm: string) {
-    return this.dataSource.query(
-      `INSERT INTO medico (nome, crm) VALUES ($1, $2) RETURNING *`,
-      [nome, crm],
-    );
+  async create(data: { nome: string; crm: string }) {
+    const medico = this.repo.create(data);
+    return this.repo.save(medico);
   }
+
+  async updateMedico(id: number, data: any) {
+    await this.repo.update(id, data);
+    return this.repo.findOne({ where: { id } });
+  }
+
+  async deleteMedico(id: number) {
+    const medico = await this.repo.findOne({ where: { id } });
+    if (!medico) return null;
+
+    await this.repo.remove(medico);
+    return medico;
+  }
+
+  async searchDoctors(filters: { specialty?: string; city?: string; name?: string }) {
+  const query = this.repo.createQueryBuilder('medico')
+    .leftJoinAndSelect('medico.especialidades', 'especialidade') // N:N
+    .leftJoinAndSelect('medico.cidades', 'cidade');              // N:N
+
+  if (filters.specialty) {
+    query.andWhere('especialidade.nome = :specialty', { specialty: filters.specialty });
+  }
+
+  if (filters.city) {
+    query.andWhere('cidade.nome = :city', { city: filters.city });
+  }
+
+  if (filters.name) {
+    query.andWhere('medico.nome ILIKE :name', { name: `%${filters.name}%` });
+  }
+
+  return query.getMany();
+}
 }
