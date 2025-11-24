@@ -1,102 +1,43 @@
-# Desafio "Cadê meu Médico?" 
+* CADÊ MEU MÉDICO?
 
-## Descrição do Projeto
+1. IDENTIFICAÇÃO DO GRUPO:
 
-Desenvolver uma API REST para um sistema de busca de médicos por especialidade e localização. O sistema deve permitir que usuários encontrem profissionais de saúde em suas cidades, com informações sobre especialidades, avaliações e disponibilidade.
+   - Guilherme Gorte e Guilherme Valente;
+   
+| 410124 | Guilherme Gorte Alves | [@guilhermegorte2-beep](https://github.com/guilhermegorte2-beep) |
+| 409915 | Guilherme Lamera Valente | [@Gui-Valente](https://github.com/Gui-Valente) |
 
-## Requisitos Técnicos
+2. DESCRIÇÃO DO PROJETO:
 
-### Obrigatórios
-- ✅ API REST completa (GET, POST, PUT, PATCH, DELETE)
-- ✅ Documentação da API (Padrão Postman ou SWAGGER)
-- ✅ Versionamento no Git
+   - O projeto consiste em uma API REST desenvolvida com NestJS e TypeORM para gerenciar médicos, especialidades, cidades e autenticação de usuários.
+Seu objetivo é permitir que usuários encontrem médicos filtrando por especialidade e localização, além de possibilitar o cadastro e consulta dessas entidades. As principais
+funcionalidades incluem CRUD completo para médicos, cidades e especialidades, autenticação via rota auth, e relacionamentos entre as entidades para consultas mais eficientes.
 
-### Stack Tecnológica
-- **Linguagem**: Livre escolha
-- **Banco de Dados**: Relacional (PostgreSQL, mariabd, sqllite)
+3. TECNOLOGIAS UTILIZADAS:
 
+   - **Linguagem**: [TypeScript/Node.js/TypeORM]
+   - **Framework**: [NestJS]
+   - **Banco de Dados**: PostgreSQL
+   - **Documentação API**: Postman
 
-## Endpoints Obrigatórios
+4. ARQUITETURA DO SISTEMA:
 
+   -[![Arquitetura do Sistema](docs/arquitetura.png)](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22P%C3%A1gina-1%22%20id%3D%22qkqXeXuYoAPpkJWtlQlh%22%3E5Vldk5owFP01PrpjCPjxSIGqU607ZWe2%2B%2BSkkgo7YJgQV%2Bmvb5AgZq1bVGgc%2BwT35AM49%2BTm5tKCVrQdUhT7U%2BLhsKV1vG0L2i1NA10N8kuGpDkCB3oOLGngiU4l4Aa%2FsAA7Al0HHk6kjoyQkAWxDC7IaoUXTMIQpWQjd%2FtJQvmpMVriI8BdoPAYfQ485udoX%2BuV%2BAgHS794MugO8pYIFZ3FlyQ%2B8sjmAIJOC1qUEJbfRVsLhxl5BS%2F5uM8nWvcvRvGKVRnw6iTz8VTXH6Mvo0V%2FBPX2xmoD8R3YO6KhnFdACVnTBf5gMk30Y2nBXjatK0xCmU%2BWZIVCp0Q%2FUbJeeTh7xQ63yj4TQmIOAg6%2BYsZSoQy0ZoRDPotC0crfkqbfxfid8ZIZD0Zh2tvDRjsVltASokvMPiKou3cV1zgmEeaT8IEUh4gFbzJpSIhtue9X%2BoPfCJec4R7NuB%2F3lB55kRxylXs0Xal7TjujJFmmcOMHDLsx2nlqw2OmTFc%2B%2Bg2FazF6MhuOvwoUU4a3B485%2Fmz%2FIBT1RdzZlGELFLFIzNIu7FQOuvUT1a1Rx7oKHVfU40ClHPXm5WiNbdN23IsE2a0gSADfKRI2JUmg1yhJ44YlCTSVmgR17mA3TTNUSbNRaen7JPqxTi7Zhcbukzl0pvOpY4%2Bt2WXr%2F08bUk9e%2FxDIy19vbEOqM%2B8d3LAs1eZH%2Ff%2BEZbWnhEGzi98ybdN9%2BjabZ2vfnDW19kFx2Cm2fq2xrb9S3s4nCuIEX0CY4z461ticXJErVUjejcaydQCb5eeaJPIcYlJ5SP081RneQFdFfGu4emIo3X06d%2BSeRqonSk%2BrBaNNHlevSVcrHFeBIUeaxg6rRRX9LuqAuiZpud156IDeXwS9sx4xDTifmJ6ncrUp8KBOzykpfZ0KQqCeIKS0PKH9g5pZDelgldLZu1ruJcGIm%2BX%2FqF3bwV896PwG%3C%2Fdiagram%3E%3C%2Fmxfile%3E)
+   
+     ### Decisões Técnicas
+1. **Por que [NestJS]**: É um framework que organiza o projeto em módulos, serviços, controllers e repositórios, criando uma arquitetura limpa e profissional. Facilita
+manutenção, testes e escalabilidade.
+3. **Por que [Node.js]**: Foi escolhido por ser rápido, escalável e muito utilizado em APIs modernas. Permite trabalhar com JavaScript/TypeScript no backend, facilitando
+produtividade e integração com outras ferramentas.
+5. **Por que [TypeScript]**: Adiciona tipagem estática ao JavaScript, evitando erros comuns em tempo de execução. Melhora legibilidade, autocompletes e segurança do código.
+6. **Por que [TypeORM]**: Permite trabalhar com banco de dados usando classes e entidades ao invés de SQL bruto. Facilita criação de relacionamentos, migrações e sincronizaçã
+com o schema do PostgreSQL.
+8. **Por que [PostgreSQL]**: Banco de dados relacional robusto, seguro e muito utilizado em aplicações sérias. Possui ótimo suporte a relacionamentos.
 
-### 👨‍⚕️ Médicos (Endpoints abertos)
-```
-GET    /api/v1/doctors          - Listar todos médicos (paginado)
-GET    /api/v1/doctors/{id}     - Detalhes de um médico
-```
-### 👨‍⚕️ Médicos (Endpoints admin)
-```
-POST   /api/v1/doctors          - Cadastrar médico (admin/médico)
-PUT    /api/v1/doctors/{id}     - Atualizar médico
-DELETE /api/v1/doctors/{id}     - Remover médico (admin)
-```
+### 5. DIVISÃO DE TAREFAS
 
-### 🔍 Busca
-```
-GET    /api/v1/search/doctors   - Busca avançada de médicos
-  Query params:
-    - specialty: Filtrar por especialidade
-    - city: Filtrar por cidade
-    - name: Buscar por nome
-```
+| Integrante | Responsabilidades | % Commits |
+|------------|-------------------|-----------|
+| Guilherme Gorte | API, Documentação, Rotas, Autenticação | 60%|
+| Guilherme Valente | Banco de Dados, Queries, Seeds, Testes | 40% |
 
-### 📋 Dados Auxiliares
-```
-GET    /api/v1/specialties      - Listar especialidades disponíveis
-GET    /api/v1/cities           - Listar cidades cadastradas
-GET    /api/v1/health          - Health check da aplicação
-```
-
-## Regras de Negócio
-
-
-### Médicos
-- CRM único e obrigatório
-- Mínimo 1 especialidade
-- Mínimo 1 cidade de atendimento
-- Campos obrigatórios: nome, CRM, especialidade, cidade
-
-
-### Especialidades (seed inicial)
-- Cardiologia
-- Dermatologia
-- Pediatria
-- Clínica Geral
-
-
-### Cidades (seed inicial)
-- São Paulo/SP
-- Apucarana/PR
-- Rio de Janeiro/RJ
-
-
-## Códigos HTTP
-
-- `200` - Sucesso (GET, PUT, PATCH)
-- `201` - Criado (POST)
-- `204` - Sem conteúdo (DELETE)
-- `400` - Requisição inválida
-- `401` - Não autorizado
-- `404` - Não encontrado
-- `422` - Entidade não processável
-- `500` - Erro interno
-
-
-### Distribuição de Notas
-
-- **Fase 1** (20%): Documentação da Arquitetura (27/10 entrega por email)
-        - Desenho da arquitura, definição da linguagem, banco de dados, definição dos json do endpoints,link do repo
-- **Fase 2** (80%): Entrega Final + Performance (24/11 projeto completo no github)
-
-
-
-
-## Links Úteis
-
-- [Docker Documentation](https://docs.docker.com/)
-- [JWT.io](https://jwt.io/)
-- [REST API Best Practices](https://restfulapi.net/)
-- [K6 Documentation](https://k6.io/docs/)
-- [Postman Learning Center](https://learning.postman.com/)
-
----
