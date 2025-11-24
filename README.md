@@ -1,98 +1,91 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+* CADÊ MEU MÉDICO?
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+1. IDENTIFICAÇÃO DO GRUPO:
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+   - Guilherme Gorte e Guilherme Valente;
+   
+| 410124 | Guilherme Gorte Alves | [@guilhermegorte2-beep](https://github.com/guilhermegorte2-beep) |
+| 409915 | Guilherme Lamera Valente | [@Gui-Valente](https://github.com/Gui-Valente) |
 
-## Description
+2. DESCRIÇÃO DO PROJETO:
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+   - O projeto consiste em uma API REST desenvolvida com NestJS e TypeORM para gerenciar médicos, especialidades, cidades e autenticação de usuários.
+Seu objetivo é permitir que usuários encontrem médicos filtrando por especialidade e localização, além de possibilitar o cadastro e consulta dessas entidades. As principais
+funcionalidades incluem CRUD completo para médicos, cidades e especialidades, autenticação via rota auth, e relacionamentos entre as entidades para consultas mais eficientes.
 
-## Project setup
+3. TECNOLOGIAS UTILIZADAS:
 
-```bash
-$ yarn install
-```
+   - **Linguagem**: [TypeScript/Node.js/TypeORM]
+   - **Framework**: [NestJS]
+   - **Banco de Dados**: PostgreSQL
+   - **Documentação API**: Postman
 
-## Compile and run the project
+4. ARQUITETURA DO SISTEMA:
 
-```bash
-# development
-$ yarn run start
+   -[![Arquitetura do Sistema](docs/arquitetura.png)](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22P%C3%A1gina-1%22%20id%3D%22qkqXeXuYoAPpkJWtlQlh%22%3E5Vldk5owFP01PrpjCPjxSIGqU607ZWe2%2B%2BSkkgo7YJgQV%2Bmvb5AgZq1bVGgc%2BwT35AM49%2BTm5tKCVrQdUhT7U%2BLhsKV1vG0L2i1NA10N8kuGpDkCB3oOLGngiU4l4Aa%2FsAA7Al0HHk6kjoyQkAWxDC7IaoUXTMIQpWQjd%2FtJQvmpMVriI8BdoPAYfQ485udoX%2BuV%2BAgHS794MugO8pYIFZ3FlyQ%2B8sjmAIJOC1qUEJbfRVsLhxl5BS%2F5uM8nWvcvRvGKVRnw6iTz8VTXH6Mvo0V%2FBPX2xmoD8R3YO6KhnFdACVnTBf5gMk30Y2nBXjatK0xCmU%2BWZIVCp0Q%2FUbJeeTh7xQ63yj4TQmIOAg6%2BYsZSoQy0ZoRDPotC0crfkqbfxfid8ZIZD0Zh2tvDRjsVltASokvMPiKou3cV1zgmEeaT8IEUh4gFbzJpSIhtue9X%2BoPfCJec4R7NuB%2F3lB55kRxylXs0Xal7TjujJFmmcOMHDLsx2nlqw2OmTFc%2B%2Bg2FazF6MhuOvwoUU4a3B485%2Fmz%2FIBT1RdzZlGELFLFIzNIu7FQOuvUT1a1Rx7oKHVfU40ClHPXm5WiNbdN23IsE2a0gSADfKRI2JUmg1yhJ44YlCTSVmgR17mA3TTNUSbNRaen7JPqxTi7Zhcbukzl0pvOpY4%2Bt2WXr%2F08bUk9e%2FxDIy19vbEOqM%2B8d3LAs1eZH%2Ff%2BEZbWnhEGzi98ybdN9%2BjabZ2vfnDW19kFx2Cm2fq2xrb9S3s4nCuIEX0CY4z461ticXJErVUjejcaydQCb5eeaJPIcYlJ5SP081RneQFdFfGu4emIo3X06d%2BSeRqonSk%2BrBaNNHlevSVcrHFeBIUeaxg6rRRX9LuqAuiZpud156IDeXwS9sx4xDTifmJ6ncrUp8KBOzykpfZ0KQqCeIKS0PKH9g5pZDelgldLZu1ruJcGIm%2BX%2FqF3bwV896PwG%3C%2Fdiagram%3E%3C%2Fmxfile%3E)
+   
+     ### Decisões Técnicas
+1. **Por que [NestJS]**: É um framework que organiza o projeto em módulos, serviços, controllers e repositórios, criando uma arquitetura limpa e profissional. Facilita
+manutenção, testes e escalabilidade.
+3. **Por que [Node.js]**: Foi escolhido por ser rápido, escalável e muito utilizado em APIs modernas. Permite trabalhar com JavaScript/TypeScript no backend, facilitando
+produtividade e integração com outras ferramentas.
+5. **Por que [TypeScript]**: Adiciona tipagem estática ao JavaScript, evitando erros comuns em tempo de execução. Melhora legibilidade, autocompletes e segurança do código.
+6. **Por que [TypeORM]**: Permite trabalhar com banco de dados usando classes e entidades ao invés de SQL bruto. Facilita criação de relacionamentos, migrações e sincronizaçã
+com o schema do PostgreSQL.
+8. **Por que [PostgreSQL]**: Banco de dados relacional robusto, seguro e muito utilizado em aplicações sérias. Possui ótimo suporte a relacionamentos.
 
-# watch mode
-$ yarn run start:dev
+### 5. DIVISÃO DE TAREFAS
 
-# production mode
-$ yarn run start:prod
-```
+| Integrante | Responsabilidades | % Commits |
+|------------|-------------------|-----------|
+| Guilherme Gorte | API, Documentação, Rotas, Autenticação | 60%|
+| Guilherme Valente | Banco de Dados, Queries, Seeds, Testes | 40% |
 
-## Run tests
+### Passo a Passo
 
-```bash
-# unit tests
-$ yarn run test
+1. Clone o repositório:
+\```bash
+git clone https://github.com/[usuario]/cade-meu-medico-[grupo].git
+cd cade-meu-medico-[grupo]
+\```
 
-# e2e tests
-$ yarn run test:e2e
+2. Configure as variáveis de ambiente:
+\```bash
+cp .env.example .env
+# Edite o arquivo .env com suas configurações
 
-# test coverage
-$ yarn run test:cov
-```
 
-## Deployment
+## 📁 Estrutura Obrigatória do Repositório
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+cade-meu-medico-[nome-grupo]/
+├── README.md                    # Documentação principal (OBRIGATÓRIO)
+├── .env.example                 # Exemplo de variáveis de ambiente (OBRIGATÓRIO)
+├── postman_collection.json      # Collection do Postman exportado (OBRIGATÓRIO)
+├── /src                         # Código fonte da aplicação
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+## ✅ Checklist de Entrega
 
-```bash
-$ yarn install -g @nestjs/mau
-$ mau deploy
-```
+Antes de entregar, verifique:
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+### Repositório Git
+- [✅] README.md completo com TODAS as seções
+- [✅] Commits de todos os integrantes (mínimo 4 cada)
+- [✅] Código organizado em pastas
 
-## Resources
 
-Check out a few resources that may come in handy when working with NestJS:
+### Docker
+- [ ] docker-compose.yml funcional
+- [✅] Aplicação inicia sem erros
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+### Documentação
+- [✅] Diagrama de arquitetura (PNG/JPG)
+- [ ] Collection do Postman exportada
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Funcionalidades
+- [✅] Todos endpoints obrigatórios funcionando
+- [ ] Autenticação JWT implementada
+- [✅] Busca por especialidade e cidade
+- [ ] Paginação funcionando
+- [✅] Tratamento de erros adequado
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).

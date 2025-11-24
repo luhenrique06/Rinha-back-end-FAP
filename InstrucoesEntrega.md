@@ -22,7 +22,7 @@ funcionalidades incluem CRUD completo para médicos, cidades e especialidades, a
 
 4. ARQUITETURA DO SISTEMA:
 
-   -
+   -[![Arquitetura do Sistema](docs/arquitetura.png)](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22P%C3%A1gina-1%22%20id%3D%22qkqXeXuYoAPpkJWtlQlh%22%3E5Vldk5owFP01PrpjCPjxSIGqU607ZWe2%2B%2BSkkgo7YJgQV%2Bmvb5AgZq1bVGgc%2BwT35AM49%2BTm5tKCVrQdUhT7U%2BLhsKV1vG0L2i1NA10N8kuGpDkCB3oOLGngiU4l4Aa%2FsAA7Al0HHk6kjoyQkAWxDC7IaoUXTMIQpWQjd%2FtJQvmpMVriI8BdoPAYfQ485udoX%2BuV%2BAgHS794MugO8pYIFZ3FlyQ%2B8sjmAIJOC1qUEJbfRVsLhxl5BS%2F5uM8nWvcvRvGKVRnw6iTz8VTXH6Mvo0V%2FBPX2xmoD8R3YO6KhnFdACVnTBf5gMk30Y2nBXjatK0xCmU%2BWZIVCp0Q%2FUbJeeTh7xQ63yj4TQmIOAg6%2BYsZSoQy0ZoRDPotC0crfkqbfxfid8ZIZD0Zh2tvDRjsVltASokvMPiKou3cV1zgmEeaT8IEUh4gFbzJpSIhtue9X%2BoPfCJec4R7NuB%2F3lB55kRxylXs0Xal7TjujJFmmcOMHDLsx2nlqw2OmTFc%2B%2Bg2FazF6MhuOvwoUU4a3B485%2Fmz%2FIBT1RdzZlGELFLFIzNIu7FQOuvUT1a1Rx7oKHVfU40ClHPXm5WiNbdN23IsE2a0gSADfKRI2JUmg1yhJ44YlCTSVmgR17mA3TTNUSbNRaen7JPqxTi7Zhcbukzl0pvOpY4%2Bt2WXr%2F08bUk9e%2FxDIy19vbEOqM%2B8d3LAs1eZH%2Ff%2BEZbWnhEGzi98ybdN9%2BjabZ2vfnDW19kFx2Cm2fq2xrb9S3s4nCuIEX0CY4z461ticXJErVUjejcaydQCb5eeaJPIcYlJ5SP081RneQFdFfGu4emIo3X06d%2BSeRqonSk%2BrBaNNHlevSVcrHFeBIUeaxg6rRRX9LuqAuiZpud156IDeXwS9sx4xDTifmJ6ncrUp8KBOzykpfZ0KQqCeIKS0PKH9g5pZDelgldLZu1ruJcGIm%2BX%2FqF3bwV896PwG%3C%2Fdiagram%3E%3C%2Fmxfile%3E)
    
      ### Decisões Técnicas
 1. **Por que [NestJS]**: É um framework que organiza o projeto em módulos, serviços, controllers e repositórios, criando uma arquitetura limpa e profissional. Facilita
@@ -34,9 +34,12 @@ produtividade e integração com outras ferramentas.
 com o schema do PostgreSQL.
 8. **Por que [PostgreSQL]**: Banco de dados relacional robusto, seguro e muito utilizado em aplicações sérias. Possui ótimo suporte a relacionamentos.
 
-### 5. ARQUITETURA DO SISTEMA
+### 5. DIVISÃO DE TAREFAS
 
-![Arquitetura do Sistema](docs/arquitetura.png)
+| Integrante | Responsabilidades | % Commits |
+|------------|-------------------|-----------|
+| Guilherme Gorte | API, Documentação, Rotas, Autenticação | 60%|
+| Guilherme Valente | Banco de Dados, Queries, Seeds, Testes | 40% |
 
 ### Passo a Passo
 
@@ -50,85 +53,39 @@ cd cade-meu-medico-[grupo]
 \```bash
 cp .env.example .env
 # Edite o arquivo .env com suas configurações
-\```
 
-3. Execute com Docker Compose:
-\```bash
-docker-compose up -d
-\```
-
-4. Aguarde a inicialização (aproximadamente 30 segundos)
-
-5. Acesse a API:
-\```
-http://localhost:3000/api/v1
-\```
-
-### Verificar se está funcionando
-\```bash
-curl http://localhost:3000/api/v1/health
-# Deve retornar: {"status": "ok"}
-\```
-
-### Parar a aplicação
-\```bash
-docker-compose down
-\```
 
 ## 📁 Estrutura Obrigatória do Repositório
 
 cade-meu-medico-[nome-grupo]/
 ├── README.md                    # Documentação principal (OBRIGATÓRIO)
-├── docker-compose.yml           # Orquestração dos containers (OBRIGATÓRIO)
-├── Dockerfile                   # Build da aplicação (OBRIGATÓRIO)
 ├── .env.example                 # Exemplo de variáveis de ambiente (OBRIGATÓRIO)
 ├── postman_collection.json      # Collection do Postman exportado (OBRIGATÓRIO)
 ├── /src                         # Código fonte da aplicação
-
-
-
-### 9. DIVISÃO DE TAREFAS (Obrigatório)
-
-```markdown
-## 👨‍💻 Divisão de Trabalho
-
-| Integrante | Responsabilidades | % Commits |
-|------------|-------------------|-----------|
-| João Silva | Backend (Autenticação, JWT), Docker | 28% |
-| Maria Oliveira | Banco de Dados, Queries, Seeds | 25% |
-| Pedro Costa | Testes de Carga, Performance | 22% |
-| Ana Paula | API de Busca, Documentação | 25% |
-
-
 
 ## ✅ Checklist de Entrega
 
 Antes de entregar, verifique:
 
 ### Repositório Git
-- [ ] README.md completo com TODAS as seções
-- [ ] Commits de todos os integrantes (mínimo 4 cada)
-- [ ] Código organizado em pastas
+- [✅] README.md completo com TODAS as seções
+- [✅] Commits de todos os integrantes (mínimo 4 cada)
+- [✅] Código organizado em pastas
 
 
 ### Docker
 - [ ] docker-compose.yml funcional
-- [ ] Aplicação inicia sem erros
+- [✅] Aplicação inicia sem erros
 
 ### Documentação
-- [ ] Diagrama de arquitetura (PNG/JPG)
+- [✅] Diagrama de arquitetura (PNG/JPG)
 - [ ] Collection do Postman exportada
 
 
 ### Funcionalidades
-- [ ] Todos endpoints obrigatórios funcionando
+- [✅] Todos endpoints obrigatórios funcionando
 - [ ] Autenticação JWT implementada
-- [ ] Busca por especialidade e cidade
+- [✅] Busca por especialidade e cidade
 - [ ] Paginação funcionando
-- [ ] Tratamento de erros adequado
+- [✅] Tratamento de erros adequado
 
-
-
----
-
-**Boa sorte! Qualquer dúvida, so me procurar.**
